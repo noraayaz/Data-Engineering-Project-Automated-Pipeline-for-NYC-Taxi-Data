@@ -1,9 +1,10 @@
 # Automated Data Pipeline for NYC Yellow Taxi Data
 
-Project Overview
+## Project Overview
 
 This project demonstrates the development of an automated data pipeline for processing and analyzing NYC Yellow Taxi trip data. The pipeline leverages Azure Data Factory, Databricks, and Azure Data Lake Storage (ADLS) to automate data ingestion, transformation, and storage, ensuring efficient batch processing. Processed data is visualized using Power BI, enabling actionable insights into taxi trip metrics.
-Key Features
+
+## Key Features
 
 Automated Batch Processing: The pipeline detects and ingests updated NYC Yellow Taxi data on a monthly basis. The system ensures that only new data is ingested, processed, and stored, while maintaining a clean metadata structure for tracking processed files.
 Dynamic Metadata Management: Tracks and manages processed files to avoid duplication and ensure efficient data updates.
@@ -24,7 +25,8 @@ Processed data is saved back into ADLS, ensuring scalability and accessibility f
 Data Visualization:
 Power BI connects to the processed data for creating dashboards and visual reports.
 Reports include key metrics such as total trips, fare amounts, and passenger distribution.
-Technologies Used
+
+## Technologies Used
 
 Azure Data Factory: Orchestrates the pipeline workflows and schedules batch processes.
 Databricks: Executes data transformation and cleaning tasks with PySpark.
@@ -32,7 +34,8 @@ Azure Data Lake Storage (ADLS): Stores raw and processed data for scalable acces
 Power BI: Provides interactive dashboards and analytics.
 Python: Powers custom data processing and workflow automation.
 PySpark: Handles scalable and distributed data transformation.
-How It Works
+
+## How It Works
 
 Automated Batch Processing:
 The pipeline detects updated data files monthly.
