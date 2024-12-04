@@ -44,3 +44,4 @@ New columns, such as trip duration, are calculated.
 Data Storage and Visualization:
 Processed data is saved in ADLS in a structured format.
 Power BI connects to the processed data to generate real-time dashboards.
+# Data-Engineering-Project-Automated-Pipeline-for-NYC-Taxi-Data
