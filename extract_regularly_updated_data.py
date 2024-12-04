@@ -2,9 +2,9 @@ from azure.storage.blob import BlobServiceClient
 import requests
 
 # Azure Data Lake connection details
-STORAGE_ACCOUNT_NAME = ""  
-STORAGE_ACCOUNT_KEY = "" 
-CONTAINER_NAME = "" 
+STORAGE_ACCOUNT_NAME = dbutils.widgets.get("STORAGE_ACCOUNT_NAME")
+CONTAINER_NAME = dbutils.widgets.get("CONTAINER_NAME")
+STORAGE_ACCOUNT_KEY = dbutils.widgets.get("STORAGE_ACCOUNT_KEY")
 
 # Base URL for the trip data
 base_url = "https://d37ci6vzurychx.cloudfront.net/trip-data/"
