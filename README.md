@@ -1,55 +1,52 @@
 # Automated Data Pipeline for NYC Yellow Taxi Data
 
 ## Project Overview
-
-This project demonstrates the development of an automated data pipeline for processing and analyzing NYC Yellow Taxi trip data. The pipeline leverages **Azure Data Factory**, **Databricks**, and **Azure Data Lake Storage (ADLS)** to automate data ingestion, transformation, and storage, ensuring efficient batch processing. Processed data is visualized using **Power BI**, enabling actionable insights into taxi trip metrics.
+This project showcases the development of an automated data pipeline for processing and analyzing NYC Yellow Taxi trip data. The pipeline integrates **Azure Data Factory**, **Databricks**, **Azure Data Lake Storage (ADLS)**, and **Azure Synapse Analytics** to automate data ingestion, transformation, and analysis, ensuring efficient batch processing and scalable analytics. The processed data is analyzed in Azure Synapse Analytics, offering advanced insights into taxi trip metrics.
 
 ---
 
 ## Key Features
 
-- **Automated Batch Processing**:  
-  The pipeline detects and ingests updated NYC Yellow Taxi data on a monthly basis. The system ensures that only new data is ingested, processed, and stored, while maintaining a clean metadata structure for tracking processed files.
+- **Automated Batch Processing**  
+  Detects and ingests updated NYC Yellow Taxi data on a monthly basis. The system ensures that only new data is ingested, processed, and stored, while maintaining a clean metadata structure for tracking processed files.
 
-- **Dynamic Metadata Management**:  
+- **Dynamic Metadata Management**  
   Tracks and manages processed files to avoid duplication and ensure efficient data updates.
 
-- **Scalable Data Transformation**:  
+- **Scalable Data Transformation**  
   Cleans, validates, and transforms data using **PySpark** on **Databricks** for analysis-ready datasets.
 
-- **Interactive Reporting**:  
-  Creates interactive **Power BI** dashboards for actionable insights, including metrics like trip duration, revenue, and passenger statistics.
+- **Advanced Analytics with Azure Synapse**  
+  Processed data is queried and analyzed in **Azure Synapse Analytics**, leveraging its scalability for large datasets and its ability to deliver actionable insights.
 
 ---
 
 ## Architecture
 
-The pipeline consists of the following components:
-
-### 1. **Data Ingestion**
+### 1. Data Ingestion
 - Automated ingestion of NYC Yellow Taxi data using **Azure Data Factory**.
 - Raw data is stored in **Azure Data Lake Storage (ADLS)** for further processing.
 - Batch frequency aligns with the data provider's monthly update schedule.
 
-### 2. **Data Transformation**
+### 2. Data Transformation
 - Data is cleaned, validated, and processed using **PySpark** in **Databricks**.
 - Missing values are handled, invalid data is removed, and additional metrics (e.g., trip duration) are calculated.
 
-### 3. **Data Storage**
-- Processed data is saved back into **ADLS**, ensuring scalability and accessibility for downstream analytics.
+### 3. Data Storage
+- Processed data is saved back into **ADLS** in a structured format, ensuring scalability and accessibility.
 
-### 4. **Data Visualization**
-- **Power BI** connects to the processed data for creating dashboards and visual reports.
-- Reports include key metrics such as total trips, fare amounts, and passenger distribution.
+### 4. Data Analysis
+- **Azure Synapse Analytics** is used to query and analyze processed data for trends and insights.
+- Complex analytical queries are run efficiently, providing detailed reports and visualizations.
 
 ---
 
 ## Technologies Used
 
 - **Azure Data Factory**: Orchestrates the pipeline workflows and schedules batch processes.
-- **Databricks**: Executes data transformation and cleaning tasks with PySpark.
+- **Databricks**: Executes data transformation and cleaning tasks with **PySpark**.
 - **Azure Data Lake Storage (ADLS)**: Stores raw and processed data for scalable access.
-- **Power BI**: Provides interactive dashboards and analytics.
+- **Azure Synapse Analytics**: Performs advanced data analysis and interactive querying.
 - **Python**: Powers custom data processing and workflow automation.
 - **PySpark**: Handles scalable and distributed data transformation.
 
@@ -57,22 +54,22 @@ The pipeline consists of the following components:
 
 ## How It Works
 
-### 1. **Automated Batch Processing**
+### 1. Automated Batch Processing
 - The pipeline detects updated data files monthly.
 - A metadata-driven workflow ensures only new files are processed, avoiding duplication.
 
-### 2. **Data Cleaning and Transformation**
+### 2. Data Cleaning and Transformation
 - Missing values in critical columns are dropped.
 - Invalid rows (e.g., negative trip distances or fare amounts) are filtered out.
 - New columns, such as trip duration, are calculated.
 
-### 3. **Data Storage and Visualization**
+### 3. Data Storage and Analysis
 - Processed data is saved in **ADLS** in a structured format.
-- **Power BI** connects to the processed data to generate real-time dashboards.
+- **Azure Synapse Analytics** is used to execute SQL-based queries and advanced data analysis.
 
 ---
 
-## Sample Insights from Power BI Dashboards
+## Sample Insights from Azure Synapse Analytics
 
 - Total trips over time.
 - Revenue analysis by month.
@@ -81,4 +78,4 @@ The pipeline consists of the following components:
 
 ---
 
-By combining the power of Azure services, Databricks, and Power BI, this pipeline ensures seamless processing, scalability, and actionable insights from NYC Yellow Taxi data.
+By combining the power of **Azure Data Factory**, **Databricks**, **Azure Data Lake Storage**, and **Azure Synapse Analytics**, this pipeline ensures seamless processing, scalability, and actionable insights from NYC Yellow Taxi data.
